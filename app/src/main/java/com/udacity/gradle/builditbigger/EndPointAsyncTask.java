@@ -29,7 +29,10 @@ public class EndPointAsyncTask extends android.os.AsyncTask<Pair<Context, String
             this.progressBar = progressBar;
         }
 
-        @Override
+    public EndPointAsyncTask(Object o) {
+    }
+
+    @Override
         protected void onPreExecute() {
             super.onPreExecute();
             if (progressBar != null) {
@@ -63,5 +66,7 @@ public class EndPointAsyncTask extends android.os.AsyncTask<Pair<Context, String
             intent.putExtra("get_joke", result);
             context.startActivity(intent);
         }
-    }
+
+
+}
 
